@@ -1,4 +1,4 @@
-module Shifter(SW, LEDR, KEY);
+module shifter(SW, LEDR, KEY);
 	input[9:0] SW;
 	input[3:0] KEY;
 	output[7:0] LEDR;
@@ -17,11 +17,11 @@ endmodule
 
 
 module ShifterInner(LoadVal, Load_n, ShiftRight, ASR, clk, reset_n, Q);
-	input reg[7:0] LoadVal;
+	input[7:0] LoadVal;
 	input Load_n, ShiftRight, ASR, clk, reset_n;
-	output reg[7:0] Q;
+	output wire [7:0] Q;
 
-	wire leftMost;
+	reg leftMost;
 	
 	always @(ASR)
 	begin
@@ -119,7 +119,7 @@ endmodule
 
 module ShifterBit(load_val, in, shift, load_n, clk, reset_n, out);
 	input load_val, in, shift, load_n, clk, reset_n;
-	output reg out;
+	output wire out;
 	wire u0u1;
 	wire u1u2;
 
