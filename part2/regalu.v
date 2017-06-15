@@ -2,7 +2,7 @@
 
 module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 
-	input[7:0] SW;
+	input[9:0] SW;
 	input[2:0] KEY;
 
 	output[7:0] LEDR;
@@ -89,10 +89,10 @@ module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 	end
 
 	u8 flipflop(
-		.d(Out[7:0)),
+		.d(Out[7:0]),
 		.clock(KEY[0]),
 		.reset_n(SW[9]),
-		.q(Final[7:0))
+		.q(Final[7:0])
 	);
 
 	assign LEDR = Final;
