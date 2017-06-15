@@ -1,0 +1,250 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/altera/16.0
+vconcat
+Z0 !s110 1497561274
+!i10b 1
+!s100 4]ckiSiO4?dhTz87R@CoC3
+IaSlz4gFN2aEAnSa^BI91z0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 dC:/cygwin64/home/Shreyansh/UofT/CSC258/summer/lab4/part2
+Z3 w1497559245
+Z4 8regalu.v
+Z5 Fregalu.v
+L0 146
+Z6 OV;L;10.4d;61
+r1
+!s85 0
+31
+Z7 !s108 1497561274.000000
+Z8 !s107 regalu.v|
+Z9 !s90 -reportprogress|300|-timescale|1ns/1ns|regalu.v|
+!i113 1
+Z10 o-timescale 1ns/1ns
+vflipflop
+R0
+!i10b 1
+!s100 RSH::hgAP95ZN:G?F8jiY1
+I6]POm`E@WI6Rhf^D^T<_H1
+R1
+R2
+R3
+R4
+R5
+L0 123
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vfull_adder
+R0
+!i10b 1
+!s100 ab:<o7Ml6PAScHH_mXE?M2
+IaJ:hlj2b3[2O1FE0o]6GN2
+R1
+R2
+R3
+R4
+R5
+L0 260
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vleftshift
+R0
+!i10b 1
+!s100 GAaMCb]9f7415`03EWi6S0
+I<hnRF:^H36BmEK^E6j=jK0
+R1
+R2
+R3
+R4
+R5
+L0 187
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vreductionor
+R0
+!i10b 1
+!s100 ckiZ6EFS@Q<6?P_`_LzNn1
+IVaomnHjbzh49SoUF5D`e12
+R1
+R2
+R3
+R4
+R5
+L0 156
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vregalu
+R0
+!i10b 1
+!s100 7Mc1`ogd^D<529DikM]Vg0
+IXlo_Sh_JzPj`JfLKQ90GZ1
+R1
+R2
+R3
+R4
+R5
+L0 3
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vrightshift
+R0
+!i10b 1
+!s100 _fmF?7nmkXc>Y9o852S>d0
+IW`JH4:[BGGhk=MRA?b@YM3
+R1
+R2
+R3
+R4
+R5
+L0 195
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vripple
+R0
+!i10b 1
+!s100 Z@Y7MSB^9QRDjI=S7_MDi2
+If]3kNJM4i65`;oI]ZQTkc1
+R1
+R2
+R3
+R4
+R5
+L0 213
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vsevenseg
+R0
+!i10b 1
+!s100 Ue2deMaGT`GX^][ieUBZD1
+IHiA5`MOW[aBJO?3GK4@R10
+R1
+R2
+R3
+R4
+R5
+L0 269
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vveriprod
+R0
+!i10b 1
+!s100 McffJVb:JK_QhUmX?N[zX2
+I70mGOLz`UW<IdNWXTm@ez3
+R1
+R2
+R3
+R4
+R5
+L0 203
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vverisum
+R0
+!i10b 1
+!s100 Ce2F=XQHkM]E5DE4i]Mcf0
+IYiCc`4E5Sd3N@ob=jK<YS3
+R1
+R2
+R3
+R4
+R5
+L0 177
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+vxororor
+R0
+!i10b 1
+!s100 ]:L=9CiC18_dfTSJAFeLB3
+I<O7KY3I2iJ_9TP;Si:1an0
+R1
+R2
+R3
+R4
+R5
+L0 166
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10

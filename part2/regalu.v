@@ -2,7 +2,7 @@
 
 module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 
-	input[7:0] SW;
+	input[9:0] SW;
 	input[2:0] KEY;
 
 	output[7:0] LEDR;
@@ -23,7 +23,7 @@ module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 	wire[7:0] Case7;
 
 	reg[7:0] Out;
-	reg[7:0] Final;
+	wire [7:0] Final;
 
 	ripple u0 (
 		.A(SW[3:0]),
@@ -33,43 +33,43 @@ module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 
 	ripple u1 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Sum(Case1[7:0])
 	);
 
 	verisum u2 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Sum(Case2[7:0])
 	);
 
 	xororor u3 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Result(Case3[7:0])
 	);
 
 	reductionor u4 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Result(Case4[7:0])
 	);
 
 	leftshift u5 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Result(Case5[7:0])
 	);
 
 	rightshift u6 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Result(Case6[7:0])
 	);
 
 	veriprod u7 (
 		.A(SW[3:0]),
-		.B(Final[7:4]),
+		.B(Final[3:0]),
 		.Result(Case7[7:0])
 	);
 
@@ -88,11 +88,11 @@ module regalu(LEDR, SW, KEY, HEX0, HEX1, HEX2, HEX3, HEX4, HEX5);
 		endcase
 	end
 
-	u8 flipflop(
-		.d(Out[7:0)),
+	flipflop u8(
+		.d(Out[7:0]),
 		.clock(KEY[0]),
 		.reset_n(SW[9]),
-		.q(Final[7:0))
+		.q(Final[7:0])
 	);
 
 	assign LEDR = Final;
@@ -121,6 +121,12 @@ endmodule
 
 
 module flipflop(d, clock, reset_n, q);
+	input[7:0] d;
+	input clock;
+	input reset_n;
+	
+	output reg[7:0] q;
+
 	always @(posedge clock) // Triggered every time clock rises
 				// Note that clock is not a keyword
 	begin
